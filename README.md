@@ -7,3 +7,5 @@
 使用鍵盤方向鍵操作上下左右，Z鍵射擊及選單確認X鍵防護罩，Shift鍵減速移動並集中射擊，遊戲主選單內設有Info可見操作。
 ## 遊戲截圖：<br>
 ![barrage](https://user-images.githubusercontent.com/85746292/191740902-8720075a-1670-4f00-a5fd-d26cc9882d09.png)
+## 實際錄影：<br>
+https://user-images.githubusercontent.com/85746292/193342381-fecdbd55-fe63-4100-b7e7-7cac7f158a08.mp4
