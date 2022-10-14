@@ -9,3 +9,5 @@
 ![barrage](https://user-images.githubusercontent.com/85746292/191740902-8720075a-1670-4f00-a5fd-d26cc9882d09.png)
 ## 實際錄影：<br>
 https://user-images.githubusercontent.com/85746292/193342381-fecdbd55-fe63-4100-b7e7-7cac7f158a08.mp4
+## 完整彈幕演示：<br>
+https://www.youtube.com/watch?v=G6pW5Elp-a8&ab_channel=%E6%A5%8A%E5%8B%9D%E5%B3%B0
