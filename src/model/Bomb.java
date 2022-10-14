@@ -7,12 +7,12 @@ import main.GameObject;
 
 public class Bomb extends GameObject {
 	static int amount;
+	static int size;
 	int counter;
-	int size;
 	
 	Player player;
 	
-	final int duration = 180;
+	final int duration = 90;
 	
 	public Bomb(){
 		active = false;
@@ -24,12 +24,16 @@ public class Bomb extends GameObject {
 		// TODO Auto-generated method stub
 		x=player.x;
 		y=player.y;
-		size += (counter > duration / 2)?-5:(size<180)?5:0;
-		if(size < 25)active = false;
+		size += (counter > duration)?15:(size<180)?5:0;
+		if(size > 1920)active = false;
 	}
 
     public Area getBounds() {
     	return new Area(new Ellipse2D.Double(x-size/2,y-size/2,size,size));
+    }
+    
+    public Area getBounds_inside() {
+    	return new Area(new Ellipse2D.Double(x-(size-32)/2,y-(size-32)/2,size-32,size-32));
     }
 	
 	@Override
@@ -47,6 +51,10 @@ public class Bomb extends GameObject {
 	
 	public static int getBomb() {
 		return amount;
+	}
+	
+	public static int getSize() {
+		return size;
 	}
 	
 	public void activate(Player iplayer) {

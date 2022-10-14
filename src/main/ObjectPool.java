@@ -6,7 +6,7 @@ import java.awt.geom.*;
 import model.*;
 
 public class ObjectPool {
-	boolean GodMode = false;	//無敵模式（測試用）
+	boolean GodMode = true;	//無敵模式（測試用）
 	
 	static EnemyBoss[] EnemyBoss;	//提前生成保存敵人列表
 	static EnemyBullet[] EnemyBullet;	//提前生成保存敵彈列表
@@ -264,15 +264,17 @@ public class ObjectPool {
 		}
 	}
 	
-	public void bombPlayer() {	//玩家發射子彈
-		//只在可視時發射
+	public void bombPlayer() {	//玩家使用爆彈
+		//只在可視且爆彈有餘量時發射
 		if (player.active&&Bomb.getBomb()>0 || GodMode == true){
 			if(ObjectPool.newBomb(player) != -1)Bomb.lessBomb();
 		}
 	}
 	
 	public void movePlayer(KeyInput keyinput) {	//玩家移動控制
-		player.move(keyinput.getXDirection(), keyinput.getYDirection(),keyinput.shift);
+		if (player.active) {
+			player.move(keyinput.getXDirection(), keyinput.getYDirection(),keyinput.shift);
+		}
 	}
 	
 	/**
@@ -310,10 +312,8 @@ public class ObjectPool {
         for (int i = 0; i < bomb.length ; i++) {
         	if (bomb[i].active == true) {
         		for (int j = 0; j <EnemyBullet.length ; j++) {
-        			if (EnemyBullet[j].active&&getDistance(EnemyBullet[j],bomb[i])<200) {	//中彈判斷
-        				if (is_Collision(bomb[i].getBounds(), EnemyBullet[j].getBounds())) {
-        					EnemyBullet[j].active = false;	//子彈消失
-        				}
+        			if (EnemyBullet[j].active&&getDistance(EnemyBullet[j],bomb[i])<(bomb[i].getSize()/2+8)&&getDistance(EnemyBullet[j],bomb[i])>(bomb[i].getSize()/2-8)) {	//子彈碰觸防護圈
+        				EnemyBullet[j].active = false;	//子彈消失
         			}
         		}
         	}

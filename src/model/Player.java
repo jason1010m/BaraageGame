@@ -31,11 +31,10 @@ public class Player extends GameObject {
 	 * 參數 my(double)：y方向的移動（-1...+1）
 	 */
     public void move(int mx, int my, boolean i_slow) {
-		//避免移動到Canvas外面
     	is_slow=i_slow;
 		double postX = x + mx * (speed - (is_slow?3:0));
 		double postY = y + my * (speed - (is_slow?3:0));
-		
+		//避免移動到Canvas外面
 		if ((0 < postX)&&(postX < 595)) {
 			x = postX;
 		}

@@ -25,43 +25,35 @@ public class Title {
 		g.setColor(Color.white);
 		count++;
 		g.setFont(titleFont);
-		g.drawString("期",150,125);
-		g.drawString("末",150,200);
-		g.drawString("專",150,275);
-		g.drawString("題",150,350);
-		g.drawString("彈",150,425);
-		g.drawString("幕",150,500);
-		g.drawString("遊",150,575);
-		g.drawString("戲",150,650);
+		g.drawString("彈",150,150);
+		g.drawString("幕",150,300);
+		g.drawString("遊",150,450);
+		g.drawString("戲",150,600);
 		g.setFont(menuFont);
 		if(menuLock == 1)g.setColor(Color.red);
 		else g.setColor(Color.white);
-		g.drawString("Start",350,232);
+		g.drawString("Start",350,216);
 		if(menuLock == 2)g.setColor(Color.red);
 		else g.setColor(Color.white);
-		g.drawString("Score",350,332);
+		g.drawString("Score",350,316);
 		if(menuLock == 3)g.setColor(Color.red);
 		else g.setColor(Color.white);
-		g.drawString("Info",350,432);
+		g.drawString("Info",350,416);
 		if(menuLock == 4)g.setColor(Color.red);
 		else g.setColor(Color.white);
-		g.drawString("Quit",350,532);
+		g.drawString("Quit",350,516);
 	}
 
 	public void drawInfo(Graphics g) {	//遊戲開始介面
 		g.setColor(Color.white);
 		count++;
 		g.setFont(infoFont);
-		g.drawString("JAVA期末專題-彈幕遊戲",200,75);
-		g.drawString("製作者：楊勝峰",235,150);
-		g.drawString("班級：資工三甲",235,225);
-		g.drawString("學號：1106405010",225,300);
 
-		g.drawString("遊戲操作；上下左右鍵操作玩家機體，被敵機子彈擊中即死亡。", 40, 400);
-		g.drawString("　　　　　Ｓｈｉｆｔ慢速移動並集中射擊。", 40, 475);
-		g.drawString("　　　　　Ｚ鍵發射子彈及選單操作、返回。", 40, 550);
-		g.drawString("　　　　　Ｘ鍵使用爆彈，每輪遊戲可使用三次爆彈。", 40, 625);
-		g.drawString("　　　　　遊戲中按下ＥＳＣ鍵可呼叫暫停選單。", 40, 700);
+		g.drawString("遊戲操作；上下左右鍵操作玩家機體，被敵機子彈擊中即死亡。", 40, 75);
+		g.drawString("　　　　　Ｓｈｉｆｔ慢速移動並集中射擊。", 40, 150);
+		g.drawString("　　　　　Ｚ鍵發射子彈及選單操作、返回。", 40, 225);
+		g.drawString("　　　　　Ｘ鍵使用爆彈，每輪遊戲可使用三次爆彈。", 40, 300);
+		g.drawString("　　　　　遊戲中按下ＥＳＣ鍵可呼叫暫停選單。", 40, 375);
 	}
 	
 	public void drawPause(Graphics g) {	//遊戲開始介面
